@@ -1,0 +1,643 @@
+Create HTML documents to study various HTML tags, Style sheets, Boarders, padding, color.
+<!DOCTYPE html>                  
+
+
+<html> 
+
+
+<head> 
+
+
+<title>My first web page</title> 
+
+
+<style> 
+
+
+.test 
+
+
+{ 
+
+
+color: blue; 
+
+
+} 
+
+
+</style> 
+
+
+<link rel="stylesheet" href="style.css" /> 
+
+
+</head> 
+
+
+<body> 
+
+
+<p>This is a paragraph</p> 
+
+
+<h1 style="color: blue">Heading 1</h1> 
+
+
+<h2 class="test">Heading 2</h2> 
+
+
+<h6>Heading 6</h6> 
+
+
+<ul> 
+
+
+<li>This is list item 1</li> 
+
+
+<li>This is list item 2</li> 
+
+
+</ul> 
+
+
+<ol> 
+
+
+<li>This is list item 1</li> 
+
+
+<li>This is list item 2</li> 
+
+
+<li>This is list item 3</li> 
+
+
+</ol> 
+
+
+<img src="C:\Users\cse\Desktop\pda.jpg" /> 
+
+
+<a href="http://www.google.com" target="_blank">Click me</a> 
+
+
+<br> 
+
+
+<input type="text" placeholder="Enter username" /> <br> 
+
+
+<input type="password" placeholder="Enter password" /> <br> 
+
+
+<input type="number" /> 
+
+
+<br>
+
+
+<button>Click me</button> 
+
+
+</body> 
+
+
+</html> 
+
+
+ style.css
+
+.test 
+{   font-size: 60px;   
+    background-color: yellow;   
+    padding: 30px;   
+    margin: 80px;   
+    border: 5px solid red; 
+} 
+  
+
+
+
+2a)   Develop a Javascript           embedded HTML file for:
+Generating Sum of n numbers. Use alert window to display the result.
+
+
+ 
+<html>
+<head> 
+
+
+<title>Experiment 2a</title> 
+
+
+</head> 
+
+
+<body> 
+
+
+<h2>Sum of n numbers</h2> 
+
+
+<input type="number" placeholder="number" class="num" /> 
+
+
+<button class="button">Sum up</button> 
+
+
+<script> 
+
+
+const btn = document.querySelector(".button"); 
+
+
+btn.addEventListener("mouseover", function () 
+
+
+{ 
+
+
+const enteredNumber = document.querySelector(".num").value; 
+
+
+let sum = 0; 
+
+
+for (let i = 1; i <= enteredNumber; i++) 
+
+
+{ 
+
+
+sum = sum + i; 
+
+
+} 
+
+
+alert("sum is :" + sum); 
+
+
+}); 
+
+
+</script> 
+
+
+</body> 
+
+
+</html> 
+
+
+2b) Determine the Roots of Quadratic Equations. Use document. Write to produce output.
+                           
+
+
+<html>
+<head> 
+
+
+<title> Quadratic Equation </title> 
+
+
+</head> 
+
+
+<body> 
+
+
+<input type="number" placeholder="co efficient of a" class="a" /> <br>
+
+
+<input type="number" placeholder="co efficient of b" class="b" /> <br>
+
+
+<input type="number" placeholder="co efficient of c" class="c" /> <br>
+
+
+<button class="button">Get roots</button> 
+
+
+<script> 
+
+
+const btn = document.querySelector(".button"); 
+
+
+btn.addEventListener("click", function () 
+
+
+{ 
+
+
+const a = Number(document.querySelector(".a").value); 
+
+
+const b = Number(document.querySelector(".b").value); 
+
+
+const c = Number(document.querySelector(".c").value); 
+
+
+let real1, real2, imag1, imag2; 
+
+
+const rootof = b * b - 4 * a * c; // negative 
+
+
+if (rootof < 0) 
+
+
+{ 
+
+
+real1 = -b / (2 * a); 
+
+
+real2 = -b / (2 * a); 
+
+
+imag1 = Math.sqrt(rootof * -1) / (2 * a) + "i"; 
+
+
+imag2 = Math.sqrt(rootof * -1) / (2 * a) + "i"; 
+
+
+} 
+
+
+// positive 
+
+
+if (rootof > 0) 
+
+
+{ 
+
+
+real1 = (-b + Math.sqrt(rootof)) / (2 * a); 
+
+
+real2 = (-b - Math.sqrt(rootof)) / (2 * a); 
+
+
+imag1 = 0 + "i"; 
+
+
+imag2 = 0 + "i"; 
+
+
+} 
+
+
+document.write("Root1 : ", real1, "+", imag1); 
+
+
+document.write("Root2 : ", real2, "-", imag2); 
+
+
+}); 
+
+
+</script> 
+
+
+</body> 
+
+
+</html>
+
+
+
+
+
+
+
+
+Lab 3)  Learn various array and object operations and perform the following operations:
+
+a) Create an empty array with name 'todoList'       
+b) Use 'push' operation on the 'todoList' array to add few objects each  having 'id' as key and   
+     string as value  (for ex {id: a},{id:b})  
+c) Use 'pop' operation to remove the last element from the  'todoList'  array.  
+d) Use 'filter' operation to return a new array of objects with no object   having id as a 
+
+
+<html>   
+<head>   
+<title>Push, Pop, Filter Operation</title> 
+</head>   
+<body>     
+<p> Analyze different array and object operations available in JavaScript and  
+        perform the following operations:       
+ <br />       
+    a) Create an empty array with name 'todoList'       <br />       
+    b) Use 'push' operation on the 'todoList' array to add few objects each  having  
+        'id' as key and string as value  (for ex {id: a},{id: b})       <br />       
+    c) Use 'pop' operation to remove the last element from the  'todoList'  array.         
+     <br />       
+    d) Use 'filter' operation to return a new array of objects with no object   having id as a  </p>     
+
+<script>       
+const todoList = [ ];       
+todoList.push({ id: "a" });       
+todoList.push({ id: "b" });       
+todoList.push({ id: "c" });       
+todoList.push({ id: "d" });       
+todoList.push({ id: "e" });       
+console.log(todoList);  
+  const poppedItem = todoList.pop();       
+  console.log(poppedItem);  
+  const filteredTodoList = todoList.filter(function (item) 
+  {         return item.id !== "a";       
+  });       
+  console.log(filteredTodoList);     
+  </script>   
+  </body> 
+  </html> 
+
+
+
+Lab 4) Create a modal window using absolute positioning in CSS and use JavaScript for opening and closing the modal.
+<!DOCTYPE html> 
+<html>   
+<head>     
+<title>Create Modal Window</title>     
+<style>      
+ .container
+ {         
+    height: 100vh;         
+    width: 100vw;         
+    background-color: red;         
+    position: relative;      
+ }       
+ .modal 
+ {         
+    height: 250px;         
+    width: 300px;         
+    background-color: gold;         
+    position: absolute;  
+    top: 30%;         
+    left: 30%;       
+    }       
+.hide 
+{         
+    display: none;       
+}     
+</style>   
+</head>   
+<body>     
+    <div class="container">       
+    <button class="open">OPEN</button>       
+    <div class="modal hide">         
+    <h1>Modal</h1>         
+    <button class="close">close</button>       
+</div>     
+</div> 
+ <script>       
+ const openBtn = document.querySelector(".open");       
+ const closeBtn = document.querySelector(".close");       
+ const modal = document.querySelector(".modal");  
+  openBtn.addEventListener("click", function () 
+  {        
+     modal.classList.remove("hide");       
+    });  
+  closeBtn.addEventListener("click", function ()
+   {         modal.classList.add("hide");      
+    });     
+    </script>   
+    </body> 
+    </html> 
+
+
+
+
+Lab 5) Learn basic flex commands and design a price card using flexbox for 
+           positioning of elements.
+
+<html>   
+<head>  
+<title>Flex Box </title>     
+<style>       
+    body 
+    {         
+        background-color: aqua;
+        display: flex;         
+        flex-direction: row;  
+        align-items: center;         
+        justify-content: center;       
+    }       
+    .card {         
+        background-color: cornsilk;
+        height: 425px;         
+        width: 350px;         
+        border: 4px solid black;       
+        }       
+    .order {        
+             display: flex;         
+             align-items: center;         
+             justify-content: space-around;       
+        }     
+    </style>   
+    </head>   
+    <body>     
+        <!-- <h3>       
+        The FlexBox was designed as a one-dimensional layout model. 
+        When we describe flexbox as being one dimensional 
+        we are describing the fact that flexbox deals with layout 
+        in one dimension at a time  either as a row or 
+        as a column. 
+        This can be contrasted with the two-dimensional model of CSS
+        Grid Layout, which controls columns and rows together.     
+    </h3> -->  
+<div class="card">       
+    <img src="C:\Users\cse\Desktop\New WAD Lab - 2022\Pizza-Burger.jpg" alt="burger" height="40%" width="100%" />       
+    <h2>Burger-King</h2>       
+<p>         
+    Pizza burgers are a simple burger recipe made to blend together two
+    incredible foods into every bite. Using your favorite pizza sauce, 
+    burger patties, pepperoni, cheeses, and bread, every bite is a 
+    harmonious blend of seasonings and ingredients working well to satisfy.   aliquid.       
+</p>       
+<div class="order">         
+    <h3>$2.45</h3>         
+    <button class="button">Order Now</button>       
+    </div>     
+    </div>     
+    <script>       
+    const btn = document.querySelector(".button");       
+    const box = document.querySelector(".order");  
+    btn.addEventListener("click", function ()
+     {        
+        box.innerHTML = "";         
+        box.insertAdjacentHTML("afterbegin", "<h2>Ordered</h2>");  
+    });     
+    </script>   
+    </body> 
+    </html>
+
+
+Lab 6) Design a website which dynamically adds and removes contents(To-Do list) using flexbox.
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+ 
+    <style>
+        #candidate {
+            border-radius: 20%;
+            border-color: aquamarine;
+            box-sizing: border-box;
+        }
+         
+        .buttonClass {
+            border-radius: 20%;
+            border-color: aqua;
+            border-style: inherit;
+        }
+         
+        button:hover {
+            background-color: green;
+        }
+    </style>
+</head>
+ 
+<body>
+    <ul id="list"></ul>
+ 
+    <input type="text" id="candidate" />
+    <button onclick="addItem()" class="buttonClass">
+    Add item</button>
+    <button onclick="removeItem()" class="buttonClass">
+    Remove item</button>
+ 
+    <script>
+        function addItem( ) {
+            var a = document.getElementById("list");
+            var candidate = document.getElementById("candidate");
+            var li = document.createElement("li");
+            li.setAttribute('id', candidate.value);
+            li.appendChild(document.createTextNode(candidate.value));
+            a.appendChild(li);
+        }
+ 
+        // Creating a function to remove item from list
+        function removeItem( ) {
+ 
+            // Declaring a variable to get select element
+            var a = document.getElementById("list");
+            var candidate = document.getElementById("candidate");
+            var item = document.getElementById(candidate.value);
+            a.removeChild(item);
+        }
+    </script>
+</body>
+ </html>
+
+
+
+
+
+
+
+
+
+
+7) Analyze the working of CSS grid layout and create a website using grid layout.  
+<html>   
+<head>  
+<title>Grid </title>     
+<style>       
+.item {         
+    background-color:yellow;       
+    }       
+.container {         
+     display: grid;         
+    
+    background-color: blue;
+    grid-template-columns: 1fr 1fr 1fr 200px;         
+    grid-template-rows: 50px 100px 200px 50px;         
+    grid-template-areas:          
+     "header header header header"           
+     "smallBox1 smallBox2 smallBox3 sidebar"           
+     "mainContent mainContent mainContent sidebar"           
+     "footer footer footer footer";  
+    gap: 16px;       
+    }       
+    .header {         
+        grid-area: header; 
+        padding: 20px;
+        font-size: 30px;
+        text-align: center      
+    }       
+    .smallBox1 {         
+       gap:20px;
+        grid-area: smallBox1; 
+        padding: 30px;
+        font-size: 30px;
+        text-align: center       
+     }       
+     .smallBox2 {         
+        grid-area: smallBox2;       
+        padding: 40px;
+        font-size: 30px;
+        text-align: Top  
+     }      
+    .smallBox3 {         
+        grid-area: smallBox3;       
+        padding: 50px;
+        font-size: 30px;
+        text-align: right  
+     }       
+    .sidebar { 
+    grid-area: sidebar;     
+    padding: 20px;
+        font-size: 30px;
+        text-align: center    
+     }       
+    .mainContent {         
+        grid-area: mainContent;  
+        padding: 20px;
+        font-size: 30px;
+        text-align: center       
+        }      
+    .footer {         
+        grid-area: footer;  
+        padding: 20px;
+        font-size: 30px;
+        text-align: center       
+        }     
+    </style>   
+</head>   
+<body>     
+    <div class="container">       
+    <div class="header item"> Header</div>       
+    <div class="smallBox1 item"> Small box 1</div>       
+    <div class="smallBox2 item"> Small box 2</div>       
+    <div class="smallBox3 item"> Small box 3</div>       
+    <div class="sidebar item"> Sidebar</div>       
+    <div class="mainContent item"> Main content</div>       
+    <div class="footer item"> Footer</div>     
+</div>   
+</body> 
+</html> 
+
+
+
+10) Write a PHP program to store current date-time in a COOKIE and display the Last visited on date-time on the web page upon reopening the same page.
+<?php
+//Calculate 60 days in the future
+//seconds * minutes * hours * days + current time
+$inTwoMonths = 60 * 60 * 24 * 60 + time(); 
+setcookie('lastVisit', date("G:i - m/d/y"), $inTwoMonths); 
+if(isset($_COOKIE['lastVisit']))
+{
+ $visit = $_COOKIE['lastVisit']; 
+ echo "Your last visit was - ". $visit;
+}
+else
+echo "You've got some stale cookies!";
+?>
